@@ -22,12 +22,7 @@ void loop() {
   printHex(rfid.uid.uidByte, rfid.uid.size);
   Serial.println();
   //Tambahkan UID RFID dibawah Sini
-  if(konten.substring(1)=="67 B4 B4 60"
-    || konten.substring(1)=="04 75 41 C2 A6 56 80"
-    || konten.substring(1)=="04 70 8B 2A 07 2B 80"
-    //|| konten.substring(1)=="0F 5D 8B DC"
-  
-  ){
+  if(konten.substring(1)=="67 B4 B4 60"){
     bukaPintu();
   }else{
     Serial.print(F("PICC type: "));
